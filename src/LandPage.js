@@ -1,10 +1,10 @@
 import React from "react";
 
-const LandingPage = () => {
+const LandingPage = ({ setLoggedIn}) => {
   return  (
     <>
     <h1>Hello! You are not logged in.</h1>
-    <button>Log In</button>
+    <button onClick={() => setLoggedIn(true)}>Log In</button>
     </>
   );
 

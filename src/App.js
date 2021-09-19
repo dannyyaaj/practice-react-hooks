@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import LandingPage from './LandPage';
-import Dashboard from './Dashboard';
+import LandingPage from "./LandPage";
+import Dashboard from "./Dashboard";
 
 function App() {
-  const [loggedIn, setLoggdIn] = useState(false);
-  
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <div>
-      {loggedIn ? <Dashboard /> : <LandingPage/>}
+      {loggedIn ? <Dashboard /> : <LandingPage setLoggedIn={setLoggedIn} />}
     </div>
   );
 }
