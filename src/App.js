@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      {loggedIn ? <Dashboard /> : <LandingPage setLoggedIn={setLoggedIn} />}
+      {loggedIn ? <Dashboard setLoggedIn={setLoggedIn} /> : <LandingPage setLoggedIn={setLoggedIn} />}
     </div>
   );
 }

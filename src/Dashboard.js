@@ -1,8 +1,11 @@
 import React from "react";
 
-const Dashboard = () => {
+const Dashboard = ({ setLoggedIn }) => {
   return (
+    <>
     <h1>Welcome to the dashboard! You are logged in.</h1>
+    <button onClick={() => { setLoggedIn(false)}} >Sign Out</button>
+    </> 
   );
 
 };
