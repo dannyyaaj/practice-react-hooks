@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import LandingPage from "./LandPage";
-import Dashboard from "./Dashboard";
+import LandingPage from './LandPage';
+import Dashboard from './Dashboard';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
