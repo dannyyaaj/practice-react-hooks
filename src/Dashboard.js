@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback }from "react";
 
 const Dashboard = ({ setLoggedIn }) => {
+  const onLogout = useCallback(() => setLoggedIn(false), [setLoggedIn])
   return (
     <>
     <h1>Welcome to the dashboard! You are logged in.</h1>
-    <button onClick={() => { setLoggedIn(false)}} >Sign Out</button>
+    <button onClick={onLogout} >Log Out</button>
     </> 
   );
 
