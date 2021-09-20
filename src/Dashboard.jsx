@@ -7,4 +7,5 @@ const Dashboard = ({ logout }) => (
     <button type="button" onClick={logout}>Log Out</button>
   </>
 );
+
 export default Dashboard;

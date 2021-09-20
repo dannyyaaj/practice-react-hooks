@@ -21,22 +21,15 @@ function useFirebaseAuth() {
   }, []);
 
   const login = useCallback(async () => {
-    // const provider = new firebase.auth.GithubAuthProvider();
     const provider = new GithubAuthProvider();
 
     try {
       const auth = getAuth();
       const result = await signInWithPopup(auth, provider);
-      console.log(result, 'results');
+
       setUser(result.user);
     } catch (error) {
-      // const errorCode = error.code;
-      // const errorMessage = error.message;
-      // // The email of the user's account used.
-      // const { email } = error;
-      // // The AuthCredential type that was used.
-      // const credential = GithubAuthProvider.credentialFromError(error);
-      console.log(error.message, 'error in login');
+      console.log(error.code, error.message, 'error in login');
     }
   }, []);
 
@@ -44,7 +37,6 @@ function useFirebaseAuth() {
     () => {
       const auth = getAuth();
       auth.signOut();
-      console.log('logging out user');
     },
     [],
   );
